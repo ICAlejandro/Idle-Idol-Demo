@@ -4,22 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idle Idol</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <section>
         
         <div class="main">
+
+            <img src="./Assets/char1.png" alt="" class="char1-img">
+            <img src="./Assets/char3.png" alt="" class="char3-img">
+            <img src="./Assets/char2.png" alt="" class="char2-img">
+            
             <div class="left">
-                <h3>Munny: 0</h3>
-                <img src="./Assets/Munny.png" alt="" srcset="">
+                <h3>Munny: <span class="munny-cost">0</span></h3>
+                <img src="./Assets/Munny.png" alt="" srcset="" class="munny-image" onclick="incrementMunny()" draggable="false">
             </div>
             <div class="right">
+                <div class="levelup" onclick="levelUp()">
+                    <div class="status-portrait">
+                        <img src="./Assets/Manager.png" alt="" class="manager-img">
+                    </div>
+                    <div class="status-cost">
+                        <h4>Manager</h4>
+                        <div class="munnycost-img">
+                            <p>Cost: <span class="manager-upgrade-cost">10</span></p>
+                            <img src="./Assets/Munny.png" alt="" class="cost-img">
+                        </div>
+                    </div>
+                    <div class="status-level">Level <span>1</span></div>
 
+                    <div class="nextlevelinfo">
+                        <p>
+                            + <span class="managerincrease">1</span> munny <br /> per second
+                        </p>
+                    </div>
+                </div> 
             </div>
         </div>
 
     </section>
+
+    <script src="index.js"></script>
     
 </body>
 </html>
